@@ -7,5 +7,10 @@ Write a function getDigit which takes in a number and a place and returns the di
 */
 
 const getDigit = (num, place) => {
-  
+  let numStr = num.toString();
+  let numArr = numStr.split('');
+  numArr.reverse();
+  numStr = numArr.join('');
+
+  return Number(numStr[place]);
 }
